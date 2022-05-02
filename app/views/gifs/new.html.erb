@@ -1,0 +1,8 @@
+<%= form_with model: @gif do |form| %>
+  <%= form.file_field :file, accept: "image/gif" %>
+  <div>
+    <%= form.label :tags, 'Comma separated tags' %>
+    <%= form.text_area :tags, size: "60x10" %>
+  </div>
+  <%= form.submit %>
+<% end %>
