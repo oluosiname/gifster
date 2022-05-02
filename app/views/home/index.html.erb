@@ -1,0 +1,9 @@
+<div>
+  <%= link_to 'Upload Gif', new_gif_path %>
+<div>
+<section class="gifs">
+  <% @gifs.each do |gif| %>
+     <%= image_tag gif.file %>
+  <% end %>
+<section>
+<%= will_paginate @gifs %>

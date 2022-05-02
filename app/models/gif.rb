@@ -2,6 +2,8 @@ class Gif < ApplicationRecord
   has_one_attached :file
   belongs_to :user
 
+  self.per_page = 5
+
   validate :validate_gif
 
   private
